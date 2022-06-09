@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
     <h1>Estamos trabajando 💪👨‍💻 ...</h1>
     <img src="/img/cat.gif" width="500px" alt="cat"> 
     <!-- <img alt="Vue logo" src="/img/slide-2.jpg"> -->
