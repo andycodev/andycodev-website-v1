@@ -1,22 +1,44 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <h1>Estamos trabajando 💪👨‍💻</h1>
-    <img src="/img/cat.gif" width="500px" alt="cat"> 
-    <img src="./assets/tree.jpg" width="500px" alt="cat"> 
-    <!-- <img alt="Vue logo" src="/img/slide-2.jpg"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <div class="preloader">
+      <div class="sk-spinner sk-spinner-pulse"></div>
+    </div>
+
+    <NavigationComponent />
+    <HomeComponent />
+   <!--  <AboutComponent :END_POINT="url" /> -->
+    <!-- <PortfolioComponent/> -->
+   <!--  <SkillsComponent :END_POINT="url" /> -->
+    <FooterComponent />
+
+    <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import NavigationComponent from "./components/NavigationComponent.vue";
+import HomeComponent from "./components/HomeComponent.vue";
+/* import AboutComponent from "./components/AboutComponent.vue"; */
+/* import SkillsComponent from "./components/SkillsComponent.vue"; */
+import FooterComponent from "./components/FooterComponent.vue";
+
+
 
 export default {
   name: "App",
   components: {
-    // HelloWorld
+    NavigationComponent,
+    HomeComponent,
+   /*  AboutComponent, */
+   /*  SkillsComponent, */
+    FooterComponent,
   },
+
+  data(){
+    return{
+      url: "/src/assets/data/data.json"
+    }
+  }
 };
 </script>
 
