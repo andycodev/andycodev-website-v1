@@ -7,7 +7,7 @@
 #./deploy.sh 
 
 
-#!/usr/bin/env sh
+#!/usr/bin/env sh/deply
 
 # abort on errors
 set -e
