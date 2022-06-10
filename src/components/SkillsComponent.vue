@@ -13,6 +13,10 @@
               y tecnologías en las cuales tengo conocimientos.
             </p>
 
+           <!--  <pre>
+              {{skills}}
+            </pre> -->
+
             <ul class="social-icon">
               <li v-for="skill in skills" :key="skill" class="tecnologias">
                 {{ skill }}

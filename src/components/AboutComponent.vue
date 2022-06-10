@@ -26,7 +26,7 @@
           data-wow-delay="0.6s"
         >
           <img
-            src="/src/assets/images/perfil-official-contra.png"
+            src="/template/images/perfil-official-contra.png"
             class="img-responsive img-circle"
             alt="About"
           />
@@ -39,11 +39,15 @@
             <h1>Experiencia</h1>
             <h3>
               Resumen sobre mi experiencia y el trabajo que desarrollo según mi
-              rol.
+              rol. 
+              {{END_POINT}}
             </h3>
+            <pre>
+              {{experiences}}
+            </pre>
           </div>
         </div>
-        <di v-for="experience in experiences" :key="experience.id" class="col-sm-12 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+       <!--  <di v-for="experience in experiences" :key="experience.id" class="col-sm-12 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
           <div class="experience">
             <h1>{{experience.entity}}</h1>
             <h2 class="text-center">{{experience.date}}</h2>
@@ -57,19 +61,21 @@
               {{experience.description}}
             </p>
           </div>
-        </di>
+        </di> -->
       </div>
     </div>
   </section>
 </template>
 
 <script>
+
 export default {
-  name: 'AboutComponente',
+  name: 'AboutComponent',
   props: ['END_POINT'],
   data() {
     return {
       experiences: [],
+      repos: [],
     };
   },
 
@@ -80,9 +86,11 @@ export default {
   methods: {
 
     async getExperiences(){
+      console.log(this.END_POINT);
       const response = await fetch(this.END_POINT);
       const data = await response.json();
       this.experiences = data.experiences.reverse();
+      console.log(this.experiences);
     }
 
   }

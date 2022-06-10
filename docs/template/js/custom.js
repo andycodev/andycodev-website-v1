@@ -33,8 +33,9 @@ $(document).ready(function() {
   $(function() {
     $('body').vegas({
         slides: [
-            { src: '/src/assets/images/slide-1.jpg' },
-            { src: '/src/assets/images/slide-2.jpg' },
+            { src: '' },
+            { src: '' },
+            /* { src: './template/images/slide-1.jpg' }, */
         ],
         timer: false,
         transition: [ 'zoomIn', ],
