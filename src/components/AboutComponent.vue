@@ -40,7 +40,6 @@
             <h3>
               Resumen sobre mi experiencia y el trabajo que desarrollo según mi
               rol.
-              {{ END_POINT }}
             </h3>
           </div>
         </div>

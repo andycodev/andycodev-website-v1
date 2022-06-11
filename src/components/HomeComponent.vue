@@ -13,12 +13,17 @@
             Hola👋, Soy Andy Giampierre ordoñez Vega
           </h1>
 
-          <h2 class="rol wow fadeInUp" data-wow-delay="0.6s">
+          <h2 class="rol wow fadeInUp" data-wow-delay="0.9s">
             Desarrollador <strong>FullStack 👨‍💻</strong>
           </h2>
           <!-- <p class="wow fadeInUp" data-wow-delay="0.9s">Snapshot website template is available for free download. Anyone can modify and use it for any site. Please tell your friends about <a rel="nofollow" href="http://www.templatemo.com">templatemo</a>. Thank you.</p> -->
-          <!-- <a href="#about" class="smoothScroll btn btn-success btn-lg wow fadeInUp" data-wow-delay="1.2s">Descargar
-            CV</a> -->
+          <a
+            href="#about"
+            class="smoothScroll btn btn-success btn-lg wow fadeInUp"
+            data-wow-delay="1.2s"
+            @click.prevent="downloadCV('./archivo.pdf', 'curriculo')"
+            >Descargar CV</a
+          >
         </div>
       </div>
     </div>
@@ -27,7 +32,49 @@
 
 <script>
 export default {
-  name: 'HomeComponent'
+  name: "HomeComponent",
+  data() {
+    return {
+      // urlFile: 'https://andycodev.github.io/deploying-vite-project-test/assets/archivo.pdf',
+      // nameFile: 'curriculo'
+    };
+  },
+
+  methods: {
+    downloadCV(fileURL, fileName) {
+      console.log(fileURL);
+      console.log(fileName);
+      // for non-IE
+       if (!window.ActiveXObject) {
+         var save = document.createElement("a");
+         save.href = fileURL;
+         save.target = "_blank";
+         var filename = fileURL.substring(fileURL.lastIndexOf("/") + 1);
+         save.download = fileName || filename;
+         if (
+           navigator.userAgent.toLowerCase().match(/(ipad|iphone|safari)/) &&
+           navigator.userAgent.search("Chrome") < 0
+         ) {
+           document.location = save.href;
+         } else {
+           var evt = new MouseEvent("click", {
+             view: window,
+             bubbles: true,
+             cancelable: false,
+           });
+           save.dispatchEvent(evt);
+           (window.URL || window.webkitURL).revokeObjectURL(save.href);
+         }
+       }
+      // for IE < 11
+       else if (!!window.ActiveXObject && document.execCommand) {
+         var _window = window.open(fileURL, "_blank");
+         _window.document.close();
+         _window.document.execCommand("SaveAs", true, fileName || fileURL);
+         _window.close();
+       }
+    },
+  },
 };
 </script>
 
