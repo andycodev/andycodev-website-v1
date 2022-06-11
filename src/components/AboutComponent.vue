@@ -86,7 +86,6 @@ export default {
 
   methods: {
     async getExperiences() {
-      console.log(this.END_POINT);
       const response = await fetch(this.END_POINT);
       const data = await response.json();
       this.experiences = data.experiences.reverse();
