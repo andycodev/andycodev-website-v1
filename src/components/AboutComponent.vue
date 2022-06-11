@@ -25,11 +25,11 @@
           class="col-md-3 col-sm-4 wow fadeInUp about-img"
           data-wow-delay="0.6s"
         >
-          <!-- <img
+          <img
             src="/template/images/perfil-official-contra.png"
             class="img-responsive img-circle"
             alt="About"
-          /> -->
+          />
         </div>
 
         <div class="clearfix"></div>
