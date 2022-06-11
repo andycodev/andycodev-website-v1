@@ -35,7 +35,7 @@ export default {
   name: "HomeComponent",
   data() {
     return {
-      urlFile: '/archivo.pdf',
+      urlFile: './archivo.pdf',
       nameFile: 'CV_AndyGiampierreOrdoñezVega'
     };
   },

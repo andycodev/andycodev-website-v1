@@ -34,7 +34,7 @@ export default {
 
   data() {
     return {
-      url: "/data.json",
+      url: "./data.json",
     };
   },
 };
