@@ -35,15 +35,13 @@ export default {
   name: "HomeComponent",
   data() {
     return {
-      urlFile: './archivo.pdf',
+      urlFile: '/archivo.pdf',
       nameFile: 'CV_AndyGiampierreOrdoñezVega'
     };
   },
 
   methods: {
     downloadCV(fileURL, fileName) {
-      console.log(fileURL);
-      console.log(fileName);
       // for non-IE
        if (!window.ActiveXObject) {
          var save = document.createElement("a");
