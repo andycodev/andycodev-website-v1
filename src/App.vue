@@ -22,8 +22,6 @@ import AboutComponent from "./components/AboutComponent.vue";
 import SkillsComponent from "./components/SkillsComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
 
-
-
 export default {
   name: "App",
   components: {
@@ -34,11 +32,11 @@ export default {
     FooterComponent,
   },
 
-  data(){
-    return{
-      url: "/data.json"
-    }
-  }
+  data() {
+    return {
+      url: "/data.json",
+    };
+  },
 };
 </script>
 

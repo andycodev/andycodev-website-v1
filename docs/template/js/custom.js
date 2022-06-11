@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
  /* jQuery Pre loader
   -----------------------------------------------*/
@@ -33,8 +34,8 @@ $(document).ready(function() {
   $(function() {
     $('body').vegas({
         slides: [
-            { src: '' },
-            { src: '' },
+            { src: './template/images/slide-1.jpg' },
+            { src: './template/images/slide-2.jpg' },
             /* { src: './template/images/slide-1.jpg' }, */
         ],
         timer: false,
@@ -52,6 +53,7 @@ $(document).ready(function() {
           itemsDesktop : [1199,3],
           itemsDesktopSmall : [979,3],
           slideSpeed: 300,
+          // eslint-disable-next-line no-dupe-keys
           itemsDesktop : [1199,2],
           itemsTablet: [768,1],
           itemsTabletSmall: [985,2],

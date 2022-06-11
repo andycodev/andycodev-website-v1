@@ -39,39 +39,40 @@
             <h1>Experiencia</h1>
             <h3>
               Resumen sobre mi experiencia y el trabajo que desarrollo según mi
-              rol. 
-              {{END_POINT}}
+              rol.
+              {{ END_POINT }}
             </h3>
-            <pre>
-              {{experiences}}
-            </pre>
           </div>
         </div>
-       <!--  <di v-for="experience in experiences" :key="experience.id" class="col-sm-12 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+        <di
+          v-for="experience in experiences"
+          :key="experience.id"
+          class="col-sm-12 col-md-4 wow fadeInUp"
+          data-wow-delay="0.3s"
+        >
           <div class="experience">
-            <h1>{{experience.entity}}</h1>
-            <h2 class="text-center">{{experience.date}}</h2>
-            <h3>{{experience.rol}}</h3>
+            <h1>{{ experience.entity }}</h1>
+            <h2 class="text-center">{{ experience.date }}</h2>
+            <h3>{{ experience.rol }}</h3>
             <img
               :src="experience.img"
               class="img-responsive"
               :alt="experience.rol"
             />
             <p>
-              {{experience.description}}
+              {{ experience.description }}
             </p>
           </div>
-        </di> -->
+        </di>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-
 export default {
-  name: 'AboutComponent',
-  props: ['END_POINT'],
+  name: "AboutComponent",
+  props: ["END_POINT"],
   data() {
     return {
       experiences: [],
@@ -79,21 +80,18 @@ export default {
     };
   },
 
-  mounted(){
+  mounted() {
     this.getExperiences();
   },
 
   methods: {
-
-    async getExperiences(){
+    async getExperiences() {
       console.log(this.END_POINT);
       const response = await fetch(this.END_POINT);
       const data = await response.json();
       this.experiences = data.experiences.reverse();
-      console.log(this.experiences);
-    }
-
-  }
+    },
+  },
 };
 </script>
 

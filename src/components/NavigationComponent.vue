@@ -23,7 +23,7 @@
           </li>
           <!-- <li><a href="#gallery" class="smoothScroll"><span>Proyectos</span></a></li> -->
           <li>
-            <a href="#contact" class="smoothScroll"><span>HABILIDADES</span></a>
+            <a href="#skills" class="smoothScroll"><span>HABILIDADES</span></a>
           </li>
         </ul>
       </div>

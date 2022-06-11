@@ -68,7 +68,7 @@ p {
 }
 
 #home p,
-#contact p,
+#skills p,
 footer p {
   color: #f9f9f9;
 }
@@ -145,14 +145,14 @@ a:focus {
 
 #about,
 #gallery,
-#contact {
+#skills {
   padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
 }
 
 #gallery,
-#contact,
+#skills,
 footer {
   text-align: center;
 }
@@ -163,7 +163,7 @@ footer {
   opacity: 0.9;
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 110vh !important;
   top: 0;
   left: 0;
   right: 0;
@@ -298,7 +298,7 @@ footer {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
-  background-color: #304352;
+  background-color: #304352 !important;
 }
 
 .navbar-default .navbar-nav>li a:hover {
@@ -366,7 +366,7 @@ footer {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh !important;
   text-align: center;
 }
 
@@ -511,13 +511,13 @@ footer {
     Contact section              
 -----------------------------------------*/
 
-#contact,
+#skills,
 footer {
   background: #304352;
   color: #ffffff;
 }
 
-#contact .form-control {
+#skills .form-control {
   background: transparent;
   box-shadow: none;
   border: 1px solid #f9f9f9;
@@ -528,16 +528,16 @@ footer {
   transition: all 0.4s ease-in-out;
 }
 
-#contact .form-control:focus {
+#skills .form-control:focus {
   border-color: #e44c65;
   color: #ffffff;
 }
 
-#contact input {
+#skills input {
   height: 55px;
 }
 
-#contact input[type="submit"] {
+#skills input[type="submit"] {
   background: #e44c65;
   border: none;
   color: #ffffff;
@@ -545,7 +545,7 @@ footer {
   letter-spacing: 1px;
 }
 
-#contact input[type="submit"]:hover {
+#skills input[type="submit"]:hover {
   background: #222;
   color: #ffffff;
 }
@@ -682,7 +682,7 @@ footer {
 
   #about,
   #gallery,
-  #contact {
+  #skills {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -712,7 +712,7 @@ footer {
   border-radius: 5px;
   padding: 25px;
   position: relative;
-  min-height: 650px;
+  min-height: 660px;
 }
 
 .experience  img{
