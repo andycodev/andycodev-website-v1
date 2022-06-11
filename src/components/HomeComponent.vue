@@ -21,7 +21,7 @@
             href="#about"
             class="smoothScroll btn btn-success btn-lg wow fadeInUp"
             data-wow-delay="1.2s"
-            @click.prevent="downloadCV('./archivo.pdf', 'curriculo')"
+            @click.prevent="downloadCV(urlFile, nameFile)"
             >Descargar CV</a
           >
         </div>
@@ -35,8 +35,8 @@ export default {
   name: "HomeComponent",
   data() {
     return {
-      // urlFile: 'https://andycodev.github.io/deploying-vite-project-test/assets/archivo.pdf',
-      // nameFile: 'curriculo'
+      urlFile: './archivo.pdf',
+      nameFile: 'CV_AndyGiampierreOrdoñezVega'
     };
   },
 
