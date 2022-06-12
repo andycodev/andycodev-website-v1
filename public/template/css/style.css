@@ -5,12 +5,11 @@ http://www.templatemo.com/tm-493-snapshot
 
 */
 
-
 /* Body 
 ------------------------------------- */
 body {
   background: #ffffff;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 300;
   position: relative;
@@ -25,7 +24,6 @@ body {
 html {
   font-size: 100%;
 }
-
 
 /*---------------------------------------
     Typorgraphy              
@@ -67,8 +65,12 @@ p {
   /* line-height: 34px; */
 }
 
+#skills p {
+  color: #333;
+}
+
 #home p,
-#skills p,
+#contact p,
 footer p {
   color: #f9f9f9;
 }
@@ -124,8 +126,6 @@ a:focus {
   box-sizing: border-box;
 }
 
-
-
 /*---------------------------------------
     All Section style              
 -----------------------------------------*/
@@ -145,7 +145,8 @@ a:focus {
 
 #about,
 #gallery,
-#skills {
+#skills,
+#contact {
   padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
@@ -153,13 +154,15 @@ a:focus {
 
 #gallery,
 #skills,
+#contact,
 footer {
   text-align: center;
 }
 
 .overlay {
-  background: #304352;
+  /* background: #304352; */
   /* background: #242424; */
+  background: #304352de;
   opacity: 0.9;
   position: absolute;
   width: 100%;
@@ -168,8 +171,6 @@ footer {
   left: 0;
   right: 0;
 }
-
-
 
 /*---------------------------------------
     Pre Loader Style              
@@ -224,8 +225,6 @@ footer {
     opacity: 0;
   }
 }
-
-
 
 /*---------------------------------------
     Main Navigation             
@@ -301,19 +300,19 @@ footer {
   background-color: #304352 !important;
 }
 
-.navbar-default .navbar-nav>li a:hover {
+.navbar-default .navbar-nav > li a:hover {
   color: #304352 !important;
 }
 
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus {
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
   color: #777;
   background-color: transparent;
 }
 
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
   color: #304352;
   background-color: transparent;
 }
@@ -333,7 +332,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-
   .navbar-default .navbar-nav li a span:before {
     background: transparent !important;
   }
@@ -350,8 +348,6 @@ footer {
     transform: scaleX(1);
   }
 }
-
-
 
 /*---------------------------------------
     Home Section              
@@ -377,8 +373,6 @@ footer {
 #home .col-md-8 {
   padding-left: 62px;
 }
-
-
 
 /*---------------------------------------
     About Section              
@@ -473,8 +467,6 @@ footer {
   color: #ffffff;
 }
 
-
-
 /*---------------------------------------
     Galllery section              
 -----------------------------------------*/
@@ -505,16 +497,14 @@ footer {
   width: 100%;
 }
 
-
-
 /*---------------------------------------
-    Contact section              
+    skills section              
 -----------------------------------------*/
 
 #skills,
 footer {
-  background: #304352;
-  color: #ffffff;
+  background: #ffffff;
+  color: #304352;
 }
 
 #skills .form-control {
@@ -550,6 +540,48 @@ footer {
   color: #ffffff;
 }
 
+/*---------------------------------------
+    Contact section              
+-----------------------------------------*/
+
+#contact,
+footer {
+  background: #304352;
+  color: #ffffff;
+}
+
+#contact .form-control {
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid #f9f9f9;
+  color: #ccc;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  transition: all 0.4s ease-in-out;
+}
+
+#contact .form-control:focus {
+  border-color: #e44c65;
+  color: #ffffff;
+}
+
+#contact input {
+  height: 55px;
+}
+
+#contact input[type="submit"] {
+  background: #e44c65;
+  border: none;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+#contact input[type="submit"]:hover {
+  background: #222;
+  color: #ffffff;
+}
 
 
 /*---------------------------------------
@@ -559,8 +591,6 @@ footer {
 footer {
   padding-bottom: 80px;
 }
-
-
 
 /*---------------------------------------
     Social icons style              
@@ -594,15 +624,13 @@ footer {
   color: #e44c65;
 }
 
-
-
 /*---------------------------------------
    Back top         
 -----------------------------------------*/
 
 .go-top {
   background-color: #ffffff;
-  box-shadow: 1px 1.732px 12px 0px rgba(0, 0, 0, .14), 1px 1.732px 3px 0px rgba(0, 0, 0, .12);
+  box-shadow: 1px 1.732px 12px 0px rgba(0, 0, 0, 0.14), 1px 1.732px 3px 0px rgba(0, 0, 0, 0.12);
   transition: all 1s ease;
   bottom: 2em;
   right: 2em;
@@ -623,14 +651,11 @@ footer {
   color: #ffffff;
 }
 
-
-
 /*---------------------------------------
    Responsive Mobile         
 -----------------------------------------*/
 
 @media (max-width: 980px) {
-
   /* 
   #home, .overlay {
     height: 50vh;
@@ -639,12 +664,9 @@ footer {
   #about .team-thumb {
     margin-top: 32px;
   }
-
 }
 
-
 @media (max-width: 767px) {
-
   #home,
   .overlay {
     height: 100vh;
@@ -661,13 +683,9 @@ footer {
     top: 0;
     left: 0;
   }
-
 }
 
-
-
 @media (max-width: 650px) {
-
   h1 {
     font-size: 1.6rem;
   }
@@ -682,11 +700,11 @@ footer {
 
   #about,
   #gallery,
-  #skills {
+  #skills,
+  #contact {
     padding-top: 80px;
     padding-bottom: 80px;
   }
-
 }
 
 .rol {
@@ -699,13 +717,13 @@ footer {
 
 .tecnologias {
   border: 2px solid #e44c65;
-  padding: 5px;
+  background: #304352;
+  padding: 6px;
   margin: 20px 12px 0px 0px;
   border-radius: 10px;
   font-size: 25px;
+  color: #ffffff;
 }
-
-
 
 .experience {
   background: #ffffff;
@@ -715,7 +733,7 @@ footer {
   min-height: 660px;
 }
 
-.experience  img{
+.experience img {
   max-width: auto;
   height: 150px;
   margin: 35px 0px 25px 0px;
@@ -752,4 +770,31 @@ footer {
   margin-top: 12px;
 }
 
-/* timeline */
+.btn-cv {
+  background: #e44c65;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 14px 32px;
+  margin-top: 26px;
+  color: #e7e7e7 !important;
+}
+
+.btn-cv:hover {
+  background: #e44c65;
+  color: #ffffff !important;
+}
+
+.btn-whatsapp {
+  background: #e44c65;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 14px 32px;
+  margin-top: 26px;
+  color: #e7e7e7 !important;
+}
+
+.btn-whatsapp:hover {
+  background: #e44c65;
+  color: #ffffff !important;
+}

@@ -1,3 +1,4 @@
+/* eslint-disable vue/no-unused-components */
 <template>
   <div id="app">
     <div class="preloader">
@@ -9,7 +10,9 @@
     <AboutComponent :END_POINT="url" />
     <!-- <PortfolioComponent/> -->
     <SkillsComponent :END_POINT="url" />
+    <ContactComponent />
     <FooterComponent />
+
 
     <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
   </div>
@@ -21,6 +24,8 @@ import HomeComponent from "./components/HomeComponent.vue";
 import AboutComponent from "./components/AboutComponent.vue";
 import SkillsComponent from "./components/SkillsComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
+import ContactComponent from './components/ContactComponent.vue';
+
 
 export default {
   name: "App",
@@ -30,6 +35,7 @@ export default {
     AboutComponent,
     SkillsComponent,
     FooterComponent,
+    ContactComponent
   },
 
   data() {

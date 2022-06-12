@@ -36,7 +36,7 @@ $(document).ready(function() {
         slides: [
             { src: './template/images/slide-1.jpg' },
             { src: './template/images/slide-2.jpg' },
-            /* { src: './template/images/slide-1.jpg' }, */
+            { src: './template/images/slide-3.jpg' },
         ],
         timer: false,
         transition: [ 'zoomIn', ],

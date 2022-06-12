@@ -19,7 +19,7 @@
           <!-- <p class="wow fadeInUp" data-wow-delay="0.9s">Snapshot website template is available for free download. Anyone can modify and use it for any site. Please tell your friends about <a rel="nofollow" href="http://www.templatemo.com">templatemo</a>. Thank you.</p> -->
           <a
             href="#about"
-            class="smoothScroll btn btn-success btn-lg wow fadeInUp"
+            class="smoothScroll btn btn-cv btn-lg wow fadeInUp"
             data-wow-delay="1.2s"
             @click.prevent="downloadCV(urlFile, nameFile)"
             >Descargar CV</a
@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       urlFile: './archivo.pdf',
-      nameFile: 'CV_AndyGiampierreOrdoñezVega'
+      nameFile: 'CV_AndyGiampierreOrdoñezVega',
     };
   },
 
@@ -73,8 +73,9 @@ export default {
        }
     },
   },
+
 };
 </script>
 
 <style>
-</style>
+</style> 
