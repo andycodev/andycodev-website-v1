@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'? '/': '/',
+    publicPath: process.env.NODE_ENV === 'production'? '/andycodev-website-v1/': '/',
       configureWebpack:{
         performance: {
           hints: false
